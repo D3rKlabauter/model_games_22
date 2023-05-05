@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Lev {
     public enum Interaction_types
     {
-        OBJECT_UP, VACUUM_CLEANER, PUSH_OBJECT
+        OBJECT_UP, VACUUM_CLEANER, PUSH_OBJECT, move_object
     }
 
     public class camera_ray : MonoBehaviour
@@ -15,6 +15,7 @@ namespace Lev {
         public Transform crosshair_t;
         public Transform push_object;
         public float pushing_strength = 1f;
+        public Transform moveObject;
 
         private GameObject[] jumpy_objects;
 
@@ -70,6 +71,16 @@ namespace Lev {
                             push_object.GetComponent<Rigidbody>().AddForce(Vector3.up * 100f * Time.deltaTime, ForceMode.Impulse);
                         }
                     } 
+                break;
+
+                case Interaction_types.move_object:
+                    if (Physics.Raycast(ray, out hit, 5000f, ~ignoreMe) && hit.collider.name == "Floor")
+                    {
+                        Vector3 power_direction = hit.point - moveObject.position;
+                        moveObject.GetComponent<Rigidbody>().AddForce(power_direction*10, ForceMode.Force);
+                    }
+                    
+
                 break;
             }
         }
