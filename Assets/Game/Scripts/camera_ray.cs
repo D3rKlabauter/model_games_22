@@ -77,7 +77,7 @@ namespace Lev {
                     if (Physics.Raycast(ray, out hit, 5000f, ~ignoreMe) && hit.collider.name == "Floor")
                     {
                         Vector3 power_direction = hit.point - moveObject.position;
-                        moveObject.GetComponent<Rigidbody>().AddForce(power_direction*10, ForceMode.Force);
+                        moveObject.GetComponent<Rigidbody>().AddForce(power_direction*pushing_strength, ForceMode.Force);
                     }
                     
 
