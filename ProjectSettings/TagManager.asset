@@ -6,6 +6,8 @@ TagManager:
   tags:
   - jumpy
   - Interactable
+  - ShapeChanger
+  - ColorChanger
   layers:
   - Default
   - TransparentFX

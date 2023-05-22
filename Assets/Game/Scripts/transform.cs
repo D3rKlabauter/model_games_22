@@ -40,24 +40,22 @@ public class transform : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Object interaction when the player enters a trigger collider
-        if (other.CompareTag("Interactable"))
+        if (other.CompareTag("ColorChanger"))
         {
-            // Do something when interacting with the object
-            Debug.Log("Interacting with object: " + other.gameObject.name);
-
-            // Check if the player's shape has already changed
-            if (!isShapeChanged)
-            {
-                // Change the player's shape
-                Vector3 randomScale = new Vector3(Random.Range(0.5f, 2f), Random.Range(0.5f, 2f), Random.Range(0.5f, 2f));
-                transform.localScale = randomScale;
-                //transform.localScale = new Vector3(2f, 0.5f, 2f);
-                //isShapeChanged = true;
-            }
-
             // Change the player's color randomly
             Color randomColor = colorOptions[Random.Range(0, colorOptions.Length)];
             playerRenderer.material.color = randomColor;
+        }
+        else if (other.CompareTag("ShapeChanger"))
+        {
+            // Check if the player's shape has already changed
+            if (!isShapeChanged)
+            {
+                // Generate a random scale
+                Vector3 randomScale = new Vector3(Random.Range(0.5f, 2f), Random.Range(0.5f, 2f), Random.Range(0.5f, 2f));
+                transform.localScale = randomScale;
+                //isShapeChanged = true;
+            }
         }
     }
 }

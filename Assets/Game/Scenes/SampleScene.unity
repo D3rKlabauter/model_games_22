@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 500388558}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Interactable
+  m_TagString: ColorChanger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500388557}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -213,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500388557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8, z: -3.08}
+  m_LocalPosition: {x: 0, y: 1.8, z: -2.03}
   m_LocalScale: {x: 100, y: 5, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -473,7 +473,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 35332a432091fd3459c7cb201df1dd1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 1367229594}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Interactable
+  m_TagString: ShapeChanger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -589,7 +589,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367229593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -640,7 +640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367229593}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.61, y: 1.8, z: -0}
+  m_LocalPosition: {x: 2.31, y: 1.8, z: 0.12}
   m_LocalScale: {x: 100, y: 5, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 1519449851}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Interactable
+  m_TagString: ColorChanger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -686,7 +686,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519449850}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -737,7 +737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519449850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8, z: 8.08}
+  m_LocalPosition: {x: 0, y: 1.8, z: 7.47}
   m_LocalScale: {x: 100, y: 5, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 2126580792}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Interactable
+  m_TagString: ShapeChanger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -783,7 +783,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126580791}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -834,7 +834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126580791}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 8.11, y: 1.8, z: 0}
+  m_LocalPosition: {x: 7.14, y: 1.8, z: 0.12}
   m_LocalScale: {x: 100, y: 5, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
