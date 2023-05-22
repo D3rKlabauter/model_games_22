@@ -10,12 +10,19 @@ public class transform : MonoBehaviour
     private Rigidbody rb;
     private bool isShapeChanged = false;
     private Vector3 originalScale;
+    private Renderer playerRenderer;
+
+    public Color[] colorOptions; // Array of colors for the player
+
 
     private void Start()
     {
         // Get the player's Rigidbody component
         rb = GetComponent<Rigidbody>();
         originalScale = transform.localScale;
+
+        // Get the Renderer component to change the player's color
+        playerRenderer = GetComponent<Renderer>();
     }
 
     private void Update()
@@ -42,9 +49,15 @@ public class transform : MonoBehaviour
             if (!isShapeChanged)
             {
                 // Change the player's shape
-                transform.localScale = new Vector3(2f, 0.5f, 2f);
-                isShapeChanged = true;
+                Vector3 randomScale = new Vector3(Random.Range(0.5f, 2f), Random.Range(0.5f, 2f), Random.Range(0.5f, 2f));
+                transform.localScale = randomScale;
+                //transform.localScale = new Vector3(2f, 0.5f, 2f);
+                //isShapeChanged = true;
             }
+
+            // Change the player's color randomly
+            Color randomColor = colorOptions[Random.Range(0, colorOptions.Length)];
+            playerRenderer.material.color = randomColor;
         }
     }
 }
