@@ -14,7 +14,7 @@ namespace Lev {
         public LayerMask ignoreMe;
         public Transform crosshair_t;
         public Transform push_object;
-        public float pushing_strength = 1f;
+        public float pushing_strength = 20f;
         public Transform moveObject;
 
         private GameObject[] jumpy_objects;
@@ -76,8 +76,12 @@ namespace Lev {
                 case Interaction_types.move_object:
                     if (Physics.Raycast(ray, out hit, 5000f, ~ignoreMe) && hit.collider.name == "Floor")
                     {
-                        Vector3 power_direction = hit.point - moveObject.position;
+                        Vector3 power_direction = (hit.point - moveObject.position).normalized;
                         moveObject.GetComponent<Rigidbody>().AddForce(power_direction*pushing_strength, ForceMode.Force);
+                    }
+
+                    else{
+                        Debug.Log("ERROR - collider: " + hit.collider.name);
                     }
                     
 

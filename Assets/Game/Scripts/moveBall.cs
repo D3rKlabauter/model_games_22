@@ -2,42 +2,54 @@ using UnityEngine;
 
 public class moveBall : MonoBehaviour
 {
-    public float speed = 5f;
-    public float rollSpeed = 10f;
-    public float deceleration = 5f;
+    // Variables for player movement
+    public float moveSpeed = 5f;
+    private Rigidbody rb;
+    private bool isShapeChanged = false;
+    private Vector3 originalScale;
+    private Renderer playerRenderer;
 
-    private float rollAmount = 0f;
-    private Vector3 moveDirection = Vector3.zero;
+    public Color[] colorOptions; // Array of colors for the player
 
-    void Update()
+    private void Start()
     {
-        // Get horizontal and vertical input and calculate roll amount
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        if (horizontalInput == 0f)
+        // Get the player's Rigidbody component
+        rb = GetComponent<Rigidbody>();
+        originalScale = transform.localScale;
+
+        // Get the Renderer component to change the player's color
+        playerRenderer = GetComponent<Renderer>();
+    }
+
+    private void Update()
+    {
+        // Get the cursor position in the game world
+        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        cursorPosition.y = transform.position.y; // Maintain the player's y position
+
+        // Move the player towards the cursor position
+        rb.MovePosition(Vector3.MoveTowards(transform.position, cursorPosition, moveSpeed * Time.deltaTime));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Object interaction when the player enters a trigger collider
+        if (other.CompareTag("ColorChanger"))
         {
-            rollAmount = 0f; // stop rolling if no input
-            if (moveDirection.magnitude > 0)
+            // Change the player's color randomly
+            Color randomColor = colorOptions[Random.Range(0, colorOptions.Length)];
+            playerRenderer.material.color = randomColor;
+        }
+        else if (other.CompareTag("ShapeChanger"))
+        {
+            // Check if the player's shape has already changed
+            if (!isShapeChanged)
             {
-                moveDirection -= moveDirection.normalized * deceleration * Time.deltaTime;
-                if (moveDirection.magnitude < 0.1f)
-                {
-                    moveDirection = Vector3.zero;
-                }
+                // Generate a random scale
+                Vector3 randomScale = new Vector3(Random.Range(0.5f, 2f), Random.Range(0.5f, 2f), Random.Range(0.5f, 2f));
+                transform.localScale = randomScale;
+                isShapeChanged = true;
             }
         }
-        else
-        {
-            rollAmount += horizontalInput * rollSpeed * Time.deltaTime;
-            rollAmount = Mathf.Clamp(rollAmount, -45f, 45f);
-            moveDirection = new Vector3(horizontalInput, 0f, verticalInput);
-        }
-
-        // Rotate the ball around its forward axis to simulate rolling
-        Quaternion roll = Quaternion.AngleAxis(rollAmount, transform.forward);
-        transform.rotation = roll;
-
-        // Move the ball in all directions based on input
-        transform.position += moveDirection.normalized * speed * Time.deltaTime;
     }
 }
