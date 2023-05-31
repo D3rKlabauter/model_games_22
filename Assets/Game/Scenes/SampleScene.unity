@@ -255,8 +255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1242215091}
   detectionRadius: 5
-  moveSpeed: 3
-  approachSpeed: 5
+  moveSpeed: 10
+  approachSpeed: 15
 --- !u!54 &688311902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -699,8 +699,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1242215091}
   detectionRadius: 5
-  moveSpeed: 3
-  approachSpeed: 5
+  moveSpeed: 10
+  approachSpeed: 15
 --- !u!54 &1258728043
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1024,8 +1024,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1242215091}
   detectionRadius: 5
-  moveSpeed: 3
-  approachSpeed: 5
+  moveSpeed: 10
+  approachSpeed: 15
 --- !u!54 &1571880206
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1155,8 +1155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1242215091}
   detectionRadius: 5
-  moveSpeed: 3
-  approachSpeed: 5
+  moveSpeed: 10
+  approachSpeed: 15
 --- !u!54 &1610579206
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1286,8 +1286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1242215091}
   detectionRadius: 5
-  moveSpeed: 3
-  approachSpeed: 5
+  moveSpeed: 10
+  approachSpeed: 15
 --- !u!54 &1855684702
 Rigidbody:
   m_ObjectHideFlags: 0

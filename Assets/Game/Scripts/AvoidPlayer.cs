@@ -16,7 +16,7 @@ public class AvoidPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // Check if the player is within the detection radius
         if (Vector3.Distance(transform.position, player.position) <= detectionRadius)
@@ -30,7 +30,8 @@ public class AvoidPlayer : MonoBehaviour
                 
 
             // Move the object in the calculated direction
-            transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+            rb.AddForce(moveDirection * moveSpeed);
+            
             // add force
 
 
@@ -41,11 +42,9 @@ public class AvoidPlayer : MonoBehaviour
             moveDirection = (player.position - transform.position).normalized;
 
             // Move the object towards the player
-            transform.Translate(moveDirection * approachSpeed * Time.deltaTime);
+            rb.AddForce(moveDirection * approachSpeed);
             // add force
         }
-
-        else
     }
     
 }
