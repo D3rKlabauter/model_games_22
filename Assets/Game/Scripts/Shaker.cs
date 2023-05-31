@@ -4,9 +4,6 @@ public class Shaker : MonoBehaviour
 {
     public Transform box;
     public GameObject[] spheres;
-    public float shakeIntensity = 1f;
-    public float fallSpeed = 2f;
-    public float rotationSpeed = 5f;
 
     private Vector3 initialBoxPosition;
     private Quaternion initialBoxRotation;
@@ -20,32 +17,12 @@ public class Shaker : MonoBehaviour
 
     private void Update()
     {
-        // Check if the mouse cursor is moving
-        if (Input.GetAxis("Mouse X") != 0f || Input.GetAxis("Mouse Y") != 0f)
-        {
-            // Shake the box based on mouse movement
-            float shakeX = Input.GetAxis("Mouse X") * shakeIntensity;
-            float shakeY = Input.GetAxis("Mouse Y") * shakeIntensity;
+        // Shake the box based on mouse movement
+        float shakeX = Input.GetAxis("Mouse X");
+        float shakeY = Input.GetAxis("Mouse Y");
 
-            box.position = initialBoxPosition + new Vector3(shakeX, shakeY, 0f);
-        }
-        else
-        {
-            // Make the box fall down slowly
-            box.position = Vector3.Lerp(box.position, initialBoxPosition, fallSpeed * Time.deltaTime);
-        }
+        box.position = new Vector3(shakeX, 0f, shakeY);
 
-        // Rotate the box slowly
-        box.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
 
-        // Apply impulses to the spheres inside the box
-        foreach (GameObject sphere in spheres)
-        {
-            Rigidbody rb = sphere.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.AddForce(Random.insideUnitSphere * shakeIntensity, ForceMode.Impulse);
-            }
-        }
     }
 }
