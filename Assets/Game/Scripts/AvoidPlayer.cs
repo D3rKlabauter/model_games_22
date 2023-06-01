@@ -31,11 +31,11 @@ public class AvoidPlayer : MonoBehaviour
 
             // Move the object in the calculated direction
             rb.AddForce(moveDirection * moveSpeed);
-            
-            // add force
+
 
 
          }
+        /*
         else
         {
             // Calculate the direction towards the player
@@ -45,6 +45,7 @@ public class AvoidPlayer : MonoBehaviour
             rb.AddForce(moveDirection * approachSpeed);
             // add force
         }
+        */
     }
     
 }

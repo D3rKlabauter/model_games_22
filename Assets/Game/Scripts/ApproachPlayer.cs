@@ -3,9 +3,9 @@ using UnityEngine;
 public class ApproachPlayer : MonoBehaviour
 {
     public Transform player;
-    public float detectionRadius = 50f;
-    public float moveSpeed = 5f;
-    public float approachSpeed = 5f;
+    public float detectionRadius = 5;
+    public float moveSpeed = 15f;
+    public float approachSpeed = 15f;
 
     private Vector3 moveDirection;
     private Rigidbody rb;
@@ -28,6 +28,7 @@ public class ApproachPlayer : MonoBehaviour
             rb.AddForce(moveDirection * approachSpeed);
 
          }
+        /*
         else
         {
             // Generate a random direction away from the player
@@ -39,5 +40,6 @@ public class ApproachPlayer : MonoBehaviour
             // Move the object in the calculated direction
             rb.AddForce(moveDirection * moveSpeed);
         }
+        */
     }
 }
