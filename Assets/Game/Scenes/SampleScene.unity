@@ -591,7 +591,7 @@ PrefabInstance:
       objectReference: {fileID: 1242215091}
     - target: {fileID: 6361877549126538899, guid: bc48dd04b5d7f4140abca00ed52e7497, type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6361877549126538899, guid: bc48dd04b5d7f4140abca00ed52e7497, type: 3}
       propertyPath: approachSpeed
@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6361877549126538899, guid: bc48dd04b5d7f4140abca00ed52e7497, type: 3}
       propertyPath: detectionRadius
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6361877549126538924, guid: bc48dd04b5d7f4140abca00ed52e7497, type: 3}
       propertyPath: m_RootOrder
@@ -767,15 +767,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4649529898842055688, guid: cf8e5a2a8e3873347a3d47f9277bdea4, type: 3}
       propertyPath: m_Drag
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4649529898842055688, guid: cf8e5a2a8e3873347a3d47f9277bdea4, type: 3}
       propertyPath: m_Mass
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4649529898842055688, guid: cf8e5a2a8e3873347a3d47f9277bdea4, type: 3}
       propertyPath: m_AngularDrag
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4649529898842055690, guid: cf8e5a2a8e3873347a3d47f9277bdea4, type: 3}
       propertyPath: m_Name
@@ -857,7 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1242215091}
-  detectionRadius: 5
+  detectionRadius: 2
   approachSpeed: 2
 --- !u!1 &963194225
 GameObject:
@@ -962,7 +962,7 @@ MonoBehaviour:
     m_Bits: 4
   crosshair_t: {fileID: 1242215091}
   push_object: {fileID: 1242215091}
-  pushing_strength: 350
+  pushing_strength: 500
   moveObject: {fileID: 1242215091}
 --- !u!1 &1242215087
 GameObject:
@@ -1070,7 +1070,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242215087}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 4
   m_Drag: 3
   m_AngularDrag: 3
   m_UseGravity: 1
@@ -2111,7 +2111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1242215091}
-  detectionRadius: 5
+  detectionRadius: 2
   approachSpeed: 2
 --- !u!114 &2114054907
 MonoBehaviour:
@@ -2234,15 +2234,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4649529898842055688, guid: cf8e5a2a8e3873347a3d47f9277bdea4, type: 3}
       propertyPath: m_Drag
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4649529898842055688, guid: cf8e5a2a8e3873347a3d47f9277bdea4, type: 3}
       propertyPath: m_Mass
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4649529898842055688, guid: cf8e5a2a8e3873347a3d47f9277bdea4, type: 3}
       propertyPath: m_AngularDrag
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4649529898842055690, guid: cf8e5a2a8e3873347a3d47f9277bdea4, type: 3}
       propertyPath: m_Name
@@ -2335,15 +2335,15 @@ PrefabInstance:
       objectReference: {fileID: 1242215091}
     - target: {fileID: 6361877549126538899, guid: bc48dd04b5d7f4140abca00ed52e7497, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6361877549126538899, guid: bc48dd04b5d7f4140abca00ed52e7497, type: 3}
       propertyPath: approachSpeed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6361877549126538899, guid: bc48dd04b5d7f4140abca00ed52e7497, type: 3}
       propertyPath: detectionRadius
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6361877549126538924, guid: bc48dd04b5d7f4140abca00ed52e7497, type: 3}
       propertyPath: m_RootOrder
