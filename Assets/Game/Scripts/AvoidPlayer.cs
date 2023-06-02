@@ -35,7 +35,7 @@ public class AvoidPlayer : MonoBehaviour
 
 
          }
-        /*
+        
         else
         {
             // Calculate the direction towards the player
@@ -45,7 +45,7 @@ public class AvoidPlayer : MonoBehaviour
             rb.AddForce(moveDirection * approachSpeed);
             // add force
         }
-        */
+        
     }
     
 }

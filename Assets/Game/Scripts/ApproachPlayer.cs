@@ -4,7 +4,7 @@ public class ApproachPlayer : MonoBehaviour
 {
     public Transform player;
     public float detectionRadius = 5;
-    public float moveSpeed = 15f;
+    //public float moveSpeed = 15f;
     public float approachSpeed = 15f;
 
     private Vector3 moveDirection;
